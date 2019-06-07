@@ -1,7 +1,12 @@
 // tests.cpp
 #include "whattotest.cpp"
+#include "square.c"
 #include <gtest/gtest.h>
  
+TEST(SquareTests, Simple) {
+    ASSERT_EQ(25.0, square(5.0));
+}
+
 TEST(SquareRootTest, PositiveNos) { 
     ASSERT_EQ(6, squareRoot(36.0));
     ASSERT_EQ(18.0, squareRoot(324.0));
